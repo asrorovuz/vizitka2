@@ -1,0 +1,144 @@
+.stages__of_work {
+  background-color: var(--svetlo-seryy);
+  background-image: url("../../assets/bg-works.svg");
+  padding: 132px 0;
+
+  .stage__of_work-title {
+    color: var(--temnyy);
+    margin-bottom: 96px;
+  }
+
+  .stage__of_work-cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 78px;
+
+    .cards {
+      display: flex;
+      column-gap: 65px;
+      align-items: center;
+
+      .loaction__icon {
+        position: relative;
+
+        span {
+          position: absolute;
+        }
+      }
+
+      .cards-right {
+        width: 100%;
+        height: 205px;
+        display: flex;
+        align-items: center;
+        column-gap: 33px;
+        background-color: var(--belyy);
+        padding: 0 83px 0 97px;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+        span {
+          font-family: var(--font-family);
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 120%;
+          color: #ccc;
+          position: absolute;
+          top: 11px;
+          left: 20px;
+        }
+
+        .red {
+          color: var(--akcentnyy);
+        }
+
+        .content {
+          padding: 17px;
+
+          h5 {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 120%;
+            color: var(--temnyy);
+            margin-bottom: 24px;
+          }
+
+          p {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: #333;
+            margin-bottom: 20px;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(1) {
+        .loaction__icon {
+          span {
+            position: absolute;
+            top: 85px;
+            left: 0px;
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        .loaction__icon {
+          span {
+            position: absolute;
+            top: 90px;
+            left: 15px;
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .loaction__icon {
+          span {
+            position: absolute;
+            top: 90px;
+            left: -5px;
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        .loaction__icon {
+          span {
+            position: absolute;
+            top: 90px;
+            left: 20px;
+          }
+        }
+      }
+
+      &:nth-of-type(5) {
+        .loaction__icon {
+          span {
+            position: absolute;
+            top: 70px;
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .stage__btn {
+    display: flex;
+    justify-content: center;
+
+    button {
+      border-radius: 15px;
+    }
+  }
+}

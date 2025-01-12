@@ -1,0 +1,109 @@
+.contact {
+  padding: 105px 0 69px;
+  background-color: var(--svetlo-seryy);
+
+  .contact__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .contact__title {
+      max-width: 870px;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 120%;
+      text-align: center;
+      color: #000;
+      margin-bottom: 68px;
+    }
+
+    .contact__form {
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 40px;
+        max-width: 1012px;
+
+        .form__section {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          row-gap: 20px;
+          margin-bottom: 71px;
+
+          &:nth-of-type(2) {
+            .form__group {
+              &:last-child {
+                label {
+                  height: 180px;
+                }
+              }
+            }
+          }
+
+          .form__group {
+            position: relative;
+
+            input,
+            select,
+            textarea,
+            label {
+              border: 1px solid #e0e0e0;
+              border-radius: 10px;
+              width: 465px;
+              height: 80px;
+              background-color: var(--belyy);
+              font-family: var(--font-family);
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 150%;
+              color: #979797;
+              padding: 25px 20px;
+            }
+
+            textarea {
+              height: 180px;
+              resize: none;
+            }
+
+            label {
+              position: absolute;
+              left: 0;
+
+              span {
+                color: var(--akcentnyy);
+              }
+            }
+
+            input:focus + label,
+            input:not(:placeholder-shown) + label,
+            select:focus + label,
+            select:not([value=""]) + label,
+            textarea:focus + label,
+            textarea:not(:placeholder-shown) + label {
+              display: none;
+            }
+          }
+        }
+
+        .form__btn {
+          display: flex;
+          justify-content: center;
+
+          button {
+            border-radius: 10px;
+          }
+        }
+
+        .error {
+          color: red;
+          font-size: 12px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}

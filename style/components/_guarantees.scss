@@ -1,0 +1,70 @@
+.guarantees {
+  margin-bottom: 100px;
+  padding-top: 92px;
+
+  h3 {
+    color: var(--temnyy);
+    margin-bottom: 115px;
+  }
+
+  .guarantees__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 25px;
+
+    .card {
+      padding: 35px;
+      background: var(--svetlo-seryy);
+      border-radius: 15px;
+      position: relative;
+
+      .card__img{
+        width: 90px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--svetlo-seryy);
+        border-radius: 50%;
+        color: #000;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .card__title {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 120%;
+        color: var(--temnyy);
+        margin-bottom: 15px;
+      }
+
+      .card__text {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #333;
+      }
+
+      &:hover {
+        background-color: #13172f;
+        background-image: url("../../assets/guartees.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .card__title, .card__text, .card__img {
+          color: var(--belyy);
+        }
+
+        .card__img{
+            background-color: #13172f;
+        }
+      }
+    }
+  }
+}
