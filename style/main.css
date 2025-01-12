@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --svetlo-seryy: #f5f5f5;
+  --temnyy: #383534;
+  --belyy: #fff;
+  --akcentnyy: #e90003;
+  --svetlyy-akcent: #ffdbdb;
+  --font-family: "Inter Tight", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Evolventa", sans-serif;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--belyy);
+  padding: 15px 25px;
+  background: var(--akcentnyy);
+  outline: 0;
+  border: 1px solid var(--akcentnyy);
+  transition: all 0.3s;
+}
+button:hover {
+  background: var(--belyy);
+  color: var(--akcentnyy);
+}
+button:active {
+  background: var(--akcentnyy);
+  color: var(--belyy);
+}
+
+h3 {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 120%;
+}
+
+header .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+header .header-top a {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 150%;
+  color: #000;
+}
+header .header-top .header-top__right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header .header-top .header-top__right p {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 120%;
+  color: #0d0d0d;
+}
+header .header-top .header-top__right button {
+  border-radius: 15px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  padding: 25px 0 100px;
+}
+.services .services__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 54px 50px;
+  border-radius: 15px;
+  background-color: var(--svetlo-seryy);
+}
+.services .services__content h1 {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  color: var(--temnyy);
+}
+.services .services__content p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--temnyy);
+}
+.services .services__content .services__btns {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.services .services__content .services__btns button {
+  border-radius: 15px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.services .services__content .services__btns button:nth-child(2) {
+  background-color: transparent;
+  color: var(--akcentnyy);
+}
+.services .services__content .services__btns button:nth-child(2):hover {
+  background-color: var(--akcentnyy);
+  color: var(--belyy);
+}
+.services .services__content .services__btns button:nth-child(2):active {
+  background-color: var(--belyy);
+  color: var(--akcentnyy);
+}
+.services .services__img {
+  border-radius: 15px;
+  position: relative;
+  background: url("../../assets/Rectangle 23.png") center/cover no-repeat;
+}
+.services .services__img img {
+  position: absolute;
+  bottom: -50px;
+  right: -42px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact-us {
+  background-color: #13172f;
+  padding: 50px 0 114px;
+  margin-bottom: 100px;
+}
+.contact-us h3 {
+  color: var(--belyy);
+  margin-bottom: 50px;
+}
+.contact-us .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.contact-us .cards .card {
+  border-radius: 15px;
+  padding: 35px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: var(--belyy);
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.contact-us .cards .card h5 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 120%;
+  color: var(--temnyy);
+}
+.contact-us .cards .card p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--temnyy);
+}
+.contact-us .cards .card span {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--temnyy);
+}
+.contact-us .cards .card button {
+  border-radius: 15px;
+}
+
+.advantages {
+  margin-bottom: 154px;
+}
+.advantages .advantages__title {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 120%;
+  color: var(--temnyy);
+  margin-bottom: 50px;
+}
+.advantages .advantages__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 25px;
+}
+.advantages .advantages__cards .card {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  background-color: var(--svetlo-seryy);
+  padding: 35px 54px 35px 11px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.advantages .advantages__cards .card .card__img {
+  min-width: 133px;
+  height: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--belyy);
+  color: #e90003;
+}
+.advantages .advantages__cards .card .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.advantages .advantages__cards .card .card__content .card__title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 120%;
+  color: var(--temnyy);
+  margin-bottom: 20px;
+}
+.advantages .advantages__cards .card .card__content .card__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #333;
+}
+.advantages .advantages__cards .card .card__content button {
+  border-radius: 15px;
+}
+.advantages .advantages__cards .card .card__content button:hover {
+  background-color: transparent;
+  border-color: var(--belyy);
+  color: var(--belyy);
+}
+.advantages .advantages__cards .card .card__content button:active {
+  background-color: var(--belyy);
+  color: #e90003;
+}
+.advantages .advantages__cards .card:hover {
+  background: url("../../assets/bg.svg") center/cover no-repeat;
+}
+.advantages .advantages__cards .card:hover .card__img {
+  color: #13172f;
+}
+.advantages .advantages__cards .card:hover .card__content .card__text,
+.advantages .advantages__cards .card:hover .card__content .card__title {
+  color: var(--belyy);
+}/*# sourceMappingURL=main.css.map */

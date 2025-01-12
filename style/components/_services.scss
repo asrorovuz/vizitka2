@@ -1,0 +1,69 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  padding: 25px 0 100px;
+
+  .services__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    padding: 54px 50px;
+    border-radius: 15px;
+    background-color: var(--svetlo-seryy);
+
+    h1 {
+      font-family: var(--third-family);
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 120%;
+      color: var(--temnyy);
+    }
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--temnyy);
+    }
+
+    .services__btns {
+      display: flex;
+      column-gap: 20px;
+
+      button {
+        border-radius: 15px;
+        width: max-content;
+
+        &:nth-child(2){
+            background-color: transparent;
+            color: var(--akcentnyy);
+
+            &:hover{
+                background-color: var(--akcentnyy);
+                color: var(--belyy);
+            }
+
+            &:active{
+                background-color: var(--belyy);
+                color: var(--akcentnyy);
+            }
+        }
+      }
+    }
+  }
+
+  .services__img {
+    border-radius: 15px;
+    position: relative;
+    background: url("../../assets/Rectangle\ 23.png") center/cover no-repeat;
+
+    img{
+        position: absolute;
+        bottom: -50px;
+        right: -42px;
+        object-fit: cover;
+    }
+  }
+}
