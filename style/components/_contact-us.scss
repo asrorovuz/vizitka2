@@ -52,3 +52,104 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .contact-us {
+    padding: 40px 0 80px;
+    margin-bottom: 80px;
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+
+      .card {
+        padding: 25px;
+
+        h5 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        span {
+          font-size: 18px;
+        }
+
+        button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-us {
+    padding: 30px 0 60px;
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .cards {
+      .card {
+        padding: 20px;
+        text-align: center;
+
+        h5 {
+          font-size: 20px;
+        }
+
+        p,
+        span {
+          font-size: 14px;
+        }
+
+        button {
+          font-size: 14px;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us {
+    padding: 20px 0 40px;
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      .card {
+        padding: 15px;
+
+        h5 {
+          font-size: 18px;
+        }
+
+        p,
+        span {
+          font-size: 12px;
+        }
+
+        button {
+          font-size: 12px;
+          padding: 8px 15px;
+        }
+      }
+    }
+  }
+}

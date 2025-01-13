@@ -57,6 +57,7 @@
   .services__img {
     border-radius: 15px;
     position: relative;
+    overflow: hidden;
     background: url("../../assets/Rectangle\ 23.png") center/cover no-repeat;
 
     img{
@@ -67,3 +68,79 @@
     }
   }
 }
+
+
+@media (max-width: 1024px) {
+  .services{
+    grid-template-columns: 1fr;
+  padding: 20px 0 80px;
+
+  .services__content {
+    padding: 40px 30px;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .services__img {
+    img {
+      bottom: -30px;
+      right: -20px;
+    }
+  }
+  }
+}
+
+@media (max-width: 768px) {
+  .services__content {
+    padding: 30px 20px;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    .services__btns {
+      flex-direction: column;
+      row-gap: 15px;
+      column-gap: 0;
+    }
+  }
+
+  .services__img {
+    img {
+      bottom: -20px;
+      right: -10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .services__content {
+    padding: 20px 15px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .services__img {
+    img {
+      bottom: -10px;
+      right: -5px;
+    }
+  }
+}
+

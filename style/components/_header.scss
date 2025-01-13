@@ -32,3 +32,80 @@ header {
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  header {
+    .header-top {
+      padding: 15px 0;
+
+      a {
+        font-size: 20px;
+      }
+
+      .header-top__right {
+        gap: 20px;
+
+        p {
+          font-size: 22px;
+        }
+
+        button {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    .header-top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+
+      a {
+        font-size: 18px;
+      }
+
+      .header-top__right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+
+        p {
+          font-size: 20px;
+        }
+
+        button {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    .header-top {
+      padding: 10px 0;
+
+      a {
+        font-size: 16px;
+      }
+
+      .header-top__right {
+        p {
+          font-size: 18px;
+        }
+
+        button {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+}

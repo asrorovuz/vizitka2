@@ -90,6 +90,7 @@
         }
 
         .form__btn {
+          width: 100%;
           display: flex;
           justify-content: center;
 
@@ -102,6 +103,114 @@
           color: red;
           font-size: 12px;
           margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact {
+    padding: 80px 0 50px;
+
+    .contact__content {
+      .contact__title {
+        font-size: 32px;
+        max-width: 700px;
+        margin-bottom: 50px;
+      }
+
+      .contact__form {
+        form {
+          max-width: 800px;
+
+          .form__section {
+            .form__group {
+              input,
+              select,
+              textarea,
+              label {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 60px 0 40px;
+
+    .contact__content {
+      .contact__title {
+        font-size: 28px;
+        max-width: 600px;
+      }
+
+      .contact__form {
+        form {
+          .form__section {
+            margin-bottom: 50px;
+
+            .form__group {
+              input,
+              select,
+              textarea {
+                font-size: 18px;
+                padding: 20px;
+              }
+            }
+          }
+
+          .form__btn {
+            button {
+              font-size: 18px;
+              padding: 15px 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .contact {
+    padding: 40px 0 30px;
+
+    .contact__content {
+      .contact__title {
+        font-size: 24px;
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .contact__form {
+        form {
+          .form__section {
+            width: 100%;
+            row-gap: 15px;
+            margin-bottom: 40px;
+
+            .form__group {
+              input,
+              select,
+              textarea {
+                font-size: 16px;
+                padding: 15px;
+              }
+            }
+          }
+
+          .form__btn {
+            button {
+              font-size: 16px;
+              padding: 10px 20px;
+            }
+          }
         }
       }
     }
