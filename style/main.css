@@ -174,8 +174,8 @@ header .header-top .header-top__right button {
 }
 .services .services__content .services__btns button {
   border-radius: 15px;
-  width: -moz-max-content;
-  width: max-content;
+  width: 100%; /* Tugmalarni teng kenglikda qilish */
+  padding: 10px 20px; /* Ichki bo'shliqni tenglashtirish */
 }
 .services .services__content .services__btns button:nth-child(2) {
   background-color: transparent;
@@ -202,62 +202,60 @@ header .header-top .header-top__right button {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .services {
-    grid-template-columns: 1fr;
-    padding: 20px 0 80px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px 0 50px;
   }
   .services .services__content {
     padding: 40px 30px;
+    row-gap: 20px;
   }
   .services .services__content h1 {
-    font-size: 36px;
+    font-size: 40px;
   }
   .services .services__content p {
     font-size: 14px;
   }
+  .services .services__content .services__btns {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .services .services__img {
+    background-position: center;
+  }
   .services .services__img img {
     bottom: -30px;
-    right: -20px;
+    right: -30px;
   }
 }
 @media (max-width: 768px) {
-  .services__content {
+  .services .services {
+    padding: 15px 0 40px;
+  }
+  .services .services__content {
     padding: 30px 20px;
+    row-gap: 15px;
   }
-  .services__content h1 {
-    font-size: 28px;
+  .services .services__content h1 {
+    font-size: 32px;
   }
-  .services__content p {
+  .services .services__content p {
     font-size: 12px;
   }
-  .services__content .services__btns {
+  .services .services__content .services__btns {
     flex-direction: column;
-    row-gap: 15px;
-    -moz-column-gap: 0;
-         column-gap: 0;
+    row-gap: 10px;
   }
-  .services__img img {
+  .services .services__img {
+    background-size: cover;
+  }
+  .services .services__img img {
     bottom: -20px;
-    right: -10px;
+    right: -20px;
   }
 }
-@media (max-width: 480px) {
-  .services__content {
-    padding: 20px 15px;
-  }
-  .services__content h1 {
-    font-size: 24px;
-  }
-  .services__content p {
-    font-size: 10px;
-  }
-  .services__img img {
-    bottom: -10px;
-    right: -5px;
-  }
-}
+
 .contact-us {
   background-color: #13172f;
   padding: 50px 0 114px;
@@ -645,7 +643,7 @@ header .header-top .header-top__right button {
   border-radius: 15px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1224px) {
   .stages__of_work {
     padding: 100px 0;
   }
@@ -658,12 +656,18 @@ header .header-top .header-top__right button {
     -moz-column-gap: 0;
          column-gap: 0;
   }
+  .stages__of_work .stage__of_work-cards .cards .loaction__icon {
+    display: none;
+  }
   .stages__of_work .stage__of_work-cards .cards .cards-right {
     height: auto;
     padding: 20px;
   }
   .stages__of_work .stage__of_work-cards .cards span {
     font-size: 30px;
+  }
+  .stages__of_work .stage__of_work-cards .cards .content {
+    margin-top: 20px;
   }
   .stages__of_work .stage__of_work-cards .cards .content h5 {
     font-size: 22px;
@@ -684,6 +688,7 @@ header .header-top .header-top__right button {
   }
   .stages__of_work .stage__of_work-cards .cards .cards-right span {
     font-size: 24px;
+    left: 50%;
   }
   .stages__of_work .stage__of_work-cards .cards .cards-right .content h5 {
     font-size: 18px;
