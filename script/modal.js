@@ -6,17 +6,6 @@ const modalConsultant = document.querySelector(".consultation");
 const modalCost = document.querySelector(".cost");
 const modalTitle = document.querySelector(".modal__title");
 
-function adjustModalFormScroll() {
-  const modalForm = document.querySelector(".modal__form form");
-  if (modalForm.scrollHeight > modalForm.offsetHeight) {
-    modalFormFild.style.overflowY = "auto";
-    modalFormFild.style.paddingRight = "10px"; // Scroll bo'lsa joy qoldirish
-  } else {
-    modalFormFild.style.overflowY = "hidden";
-    modalFormFild.style.paddingRight = "0"; // Scroll bo'lmasa joyni olib tashlash
-  }
-}
-
 // Updated form validation function to work with both forms
 function validateForm(form) {
   const nameInput = form.querySelector(
@@ -69,7 +58,6 @@ function collectFormData(form) {
 
 modalConsultant.addEventListener("click", () => {
   modalTitle.textContent = "Получить консультацию";
-  adjustModalFormScroll();
   modalForm.innerHTML = `
         <form id="consultantForm">
             <div class="form">
@@ -121,7 +109,6 @@ modalConsultant.addEventListener("click", () => {
 });
 
 modalCost.addEventListener("click", () => {
-  adjustModalFormScroll();
   modalTitle.textContent = "Получить расчет стоимости";
   modalForm.innerHTML = ` <form id="costForm">
                 <div class="form">
