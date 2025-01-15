@@ -19,29 +19,34 @@ function adjustModalFormScroll() {
 
 // Updated form validation function to work with both forms
 function validateForm(form) {
-  const nameInput = form.querySelector('input[id$="name-modal"], input[id="name-cost"]');
-  const phoneInput = form.querySelector('input[id$="phone-modal"], input[id="phone-cost"]');
-  const nameError = form.querySelector('#nameError');
-  const phoneError = form.querySelector('#phoneError');
+  const nameInput = form.querySelector(
+    'input[id$="name-modal"], input[id="name-cost"]'
+  );
+  const phoneInput = form.querySelector(
+    'input[id$="phone-modal"], input[id="phone-cost"]'
+  );
+  const nameError = form.querySelector("#nameError");
+  const phoneError = form.querySelector("#phoneError");
   let isValid = true;
 
   // Reset previous error messages
-  nameError.textContent = '';
-  phoneError.textContent = '';
+  nameError.textContent = "";
+  phoneError.textContent = "";
 
   // Name validation
   if (!nameInput.value.trim()) {
-    nameError.textContent = 'Пожалуйста, введите имя';
+    nameError.textContent = "Пожалуйста, введите имя";
     isValid = false;
   }
 
   // Phone validation (basic check for non-empty and numeric)
-  const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+  const phoneRegex =
+    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
   if (!phoneInput.value.trim()) {
-    phoneError.textContent = 'Пожалуйста, введите номер телефона';
+    phoneError.textContent = "Пожалуйста, введите номер телефона";
     isValid = false;
   } else if (!phoneRegex.test(phoneInput.value)) {
-    phoneError.textContent = 'Пожалуйста, введите корректный номер телефона';
+    phoneError.textContent = "Пожалуйста, введите корректный номер телефона";
     isValid = false;
   }
 
@@ -51,9 +56,9 @@ function validateForm(form) {
 // Function to collect form data
 function collectFormData(form) {
   const formData = {};
-  const inputs = form.querySelectorAll('input, select, textarea');
-  
-  inputs.forEach(input => {
+  const inputs = form.querySelectorAll("input, select, textarea");
+
+  inputs.forEach((input) => {
     if (input.id) {
       formData[input.id] = input.value.trim();
     }
@@ -88,26 +93,27 @@ modalConsultant.addEventListener("click", () => {
           </form>`;
 
   // Add form submission event listener for consultation form
-  const consultantForm = modalForm.querySelector('#consultantForm');
-  consultantForm.addEventListener('submit', function(event) {
+  const consultantForm = modalForm.querySelector("#consultantForm");
+  consultantForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     if (validateForm(this)) {
       const formData = collectFormData(this);
-      
+
       // Display collected data in an alert
-      let alertMessage = "Форма консультации отправлена!\n\nСобранные данные:\n";
+      let alertMessage =
+        "Форма консультации отправлена!\n\nСобранные данные:\n";
       for (const [key, value] of Object.entries(formData)) {
         if (value) {
           alertMessage += `${key}: ${value}\n`;
         }
       }
-      
+
       alert(alertMessage);
 
       // Reset form and close modal
       this.reset();
-      modal.classList.remove('active');
+      modal.classList.remove("active");
     }
   });
 
@@ -161,26 +167,27 @@ modalCost.addEventListener("click", () => {
               </form>`;
 
   // Add form submission event listener for cost calculation form
-  const costForm = modalForm.querySelector('#costForm');
-  costForm.addEventListener('submit', function(event) {
+  const costForm = modalForm.querySelector("#costForm");
+  costForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     if (validateForm(this)) {
       const formData = collectFormData(this);
-      
+
       // Display collected data in an alert
-      let alertMessage = "Форма расчета стоимости отправлена!\n\nСобранные данные:\n";
+      let alertMessage =
+        "Форма расчета стоимости отправлена!\n\nСобранные данные:\n";
       for (const [key, value] of Object.entries(formData)) {
         if (value) {
           alertMessage += `${key}: ${value}\n`;
         }
       }
-      
+
       alert(alertMessage);
 
       // Reset form and close modal
       this.reset();
-      modal.classList.remove('active');
+      modal.classList.remove("active");
     }
   });
 
