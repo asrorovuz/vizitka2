@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/modal.css" />
   </head>
   <body>
     <header>
@@ -13,7 +14,7 @@
           <a href="/"> ТрансАвто </a>
 
           <div class="header-top__right">
-            <p>+7(812)336-32-24</p>
+            <a href="tel:+78123363224">+7(812)336-32-24</a>
             <button>Связаться</button>
           </div>
         </div>
@@ -31,8 +32,8 @@
               точно в срок.
             </p>
             <div class="services__btns">
-              <button>Рассчитать стоимость</button>
-              <button>Получить консультацию</button>
+              <button class="cost">Рассчитать стоимость</button>
+              <button class="consultation">Получить консультацию</button>
             </div>
           </div>
           <div class="services__img">
@@ -75,6 +76,9 @@
 
           <div class="advantages__cards">
             <div class="card">
+              <div class="bg-card">
+                <img src="./assets/bg-card.png" alt="card backround" />
+              </div>
               <div class="card__img">
                 <svg
                   width="80"
@@ -120,6 +124,9 @@
             </div>
 
             <div class="card">
+              <div class="bg-card">
+                <img src="./assets/bg-card.png" alt="card backround" />
+              </div>
               <div class="card__img">
                 <svg
                   width="79"
@@ -180,6 +187,9 @@
             </div>
 
             <div class="card">
+              <div class="bg-card">
+                <img src="./assets/bg-card.png" alt="card backround" />
+              </div>
               <div class="card__img">
                 <svg
                   width="80"
@@ -240,6 +250,9 @@
             </div>
 
             <div class="card">
+              <div class="bg-card">
+                <img src="./assets/bg-card.png" alt="card backround" />
+              </div>
               <div class="card__img">
                 <svg
                   width="80"
@@ -291,6 +304,9 @@
             </div>
 
             <div class="card">
+              <div class="bg-card">
+                <img src="./assets/bg-card.png" alt="card backround" />
+              </div>
               <div class="card__img">
                 <svg
                   width="80"
@@ -400,6 +416,9 @@
             </div>
 
             <div class="card">
+              <div class="bg-card">
+                <img src="./assets/bg-card.png" alt="card backround" />
+              </div>
               <div class="card__img">
                 <svg
                   width="80"
@@ -450,6 +469,9 @@
             </div>
 
             <div class="card">
+              <div class="bg-card">
+                <img src="./assets/bg-card.png" alt="card backround" />
+              </div>
               <div class="card__img">
                 <svg
                   width="80"
@@ -513,6 +535,9 @@
             </div>
 
             <div class="card">
+              <div class="bg-card">
+                <img src="./assets/bg-card.png" alt="card backround" />
+              </div>
               <div class="card__img">
                 <svg
                   width="80"
@@ -1092,11 +1117,13 @@
               </div>
 
               <div class="card__content">
-                <div class="card__title">Четкое соблюдение законов и правил</div>
+                <div class="card__title">
+                  Четкое соблюдение законов и правил
+                </div>
                 <div class="card__text">
-                  Федеральный закон “Устав автомобильного транспорта” ГК РФ, Глава
-                  40 (Перевозка) Постановление об утверждении правил перевозки
-                  грузов
+                  Федеральный закон “Устав автомобильного транспорта” ГК РФ,
+                  Глава 40 (Перевозка) Постановление об утверждении правил
+                  перевозки грузов
                 </div>
               </div>
             </div>
@@ -1164,8 +1191,8 @@
               <div class="card__content">
                 <div class="card__title">Тщательная проверка документов</div>
                 <div class="card__text">
-                  Свидетельство о регистрации ТС, паспорт ТС; документов водителя:
-                  паспорт, водительское удостоверение, договор
+                  Свидетельство о регистрации ТС, паспорт ТС; документов
+                  водителя: паспорт, водительское удостоверение, договор
                 </div>
               </div>
             </div>
@@ -1175,7 +1202,7 @@
 
       <div class="our__fleet">
         <div class="container">
-          <h3>Наш автопарк</h3>
+          <h3 class="our__fleet-title">Наш автопарк</h3>
 
           <div class="our__fleet_cards">
             <div class="card">
@@ -1254,38 +1281,40 @@
 
             <div class="contact__form">
               <form id="transportForm">
-                <div class="form__section">
-                  <div class="form__group">
-                    <input type="text" id="name" placeholder=" " required />
-                    <label for="name">Имя <span>*</span></label>
-                    <div class="error" id="nameError"></div>
+                <div class="form">
+                  <div class="form__section">
+                    <div class="form__group">
+                      <input type="text" id="name" placeholder=" " required />
+                      <label for="name">Имя <span>*</span></label>
+                      <div class="error" id="nameError"></div>
+                    </div>
+
+                    <div class="form__group">
+                      <input type="tel" id="phone" placeholder=" " required />
+                      <label for="phone">Телефон <span>*</span></label>
+                      <div class="error" id="phoneError"></div>
+                    </div>
+
+                    <div class="form__group">
+                      <input type="email" id="email" placeholder=" " />
+                      <label for="email">E-mail</label>
+                    </div>
                   </div>
 
-                  <div class="form__group">
-                    <input type="tel" id="phone" placeholder=" " required />
-                    <label for="phone">Телефон <span>*</span></label>
-                    <div class="error" id="phoneError"></div>
-                  </div>
+                  <div class="form__section">
+                    <div class="form__group">
+                      <select id="transport-type">
+                        <option value="">Выберите тип перевозки</option>
+                        <option value="cargo">Грузоперевозка</option>
+                        <option value="passenger">Пассажироперевозка</option>
+                      </select>
+                      <label for="transport-type">Выберите тип перевозки</label>
+                    </div>
 
-                  <div class="form__group">
-                    <input type="email" id="email" placeholder=" " />
-                    <label for="email">E-mail</label>
-                  </div>
-                </div>
-
-                <div class="form__section">
-                  <div class="form__group">
-                    <select id="transport-type">
-                      <option value="">Выберите тип перевозки</option>
-                      <option value="cargo">Грузоперевозка</option>
-                      <option value="passenger">Пассажироперевозка</option>
-                    </select>
-                    <label for="transport-type">Выберите тип перевозки</label>
-                  </div>
-
-                  <div class="form__group">
-                    <textarea id="comment" placeholder=" "></textarea>
-                    <label for="comment">Комментарий</label>
+                    <div class="form__group">
+                      <textarea id="comment" placeholder=" "></textarea>
+                      <label for="comment">Комментарий</label>
+                    </div>
                   </div>
                 </div>
 
@@ -1308,20 +1337,81 @@
               Санкт-Петербург, ул. Лесная, Д. 13 К. 1 Литера А, Офис 1,
               Помещение 11-Н
             </address>
-            <a href="test@mail.ru">test@mail.ru</a>
-            <a href="+7(812)336-32-24">+7(812)336-32-24</a>
+            <a href="mailto:test@mail.ru">test@mail.ru</a>
+            <a href="tel:+78123363224">+7(812)336-32-24</a>
           </div>
           <button>Заказать обратный звонок</button>
         </div>
 
         <div class="footer__bottom">
-          <a href="">ТрансАвто </a>
-          <a href="">Политика конфиденциальности</a>
-          <a href="">Разработано в Профиткит</a>
+          <a href="#">ТрансАвто </a>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Разработано в Профиткит</a>
         </div>
       </div>
     </footer>
 
+    <div class="modal">
+      <div class="modal__card">
+        <div class="modal__close">
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M26.25 8.75L8.75 26.25"
+              stroke="#383534"
+              stroke-width="2"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M8.75 8.75L26.25 26.25"
+              stroke="#383534"
+              stroke-width="2"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <div class="modal__title"></div>
+
+        <div class="modal__form">
+          <form>
+            <div class="form">
+              <div class="form__section">
+                <div class="form__group">
+                  <input type="text" id="name-modal" placeholder=" " required />
+                  <label for="name-modal">Имя <span>*</span></label>
+                  <div class="error" id="nameError"></div>
+                </div>
+
+                <div class="form__group">
+                  <input type="tel" id="phone-modal" placeholder=" " required />
+                  <label for="phone-modal">Телефон <span>*</span></label>
+                  <div class="error" id="phoneError"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form__btn">
+              <button>Отправить</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal__footer">
+          Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#"
+            >Политикой конфиденциальности</a
+          >
+        </div>
+      </div>
+    </div>
+
     <script src="./script/main.js"></script>
+    <script src="./script/modal.js"></script>
   </body>
 </html>

@@ -23,6 +23,20 @@
       padding: 35px 54px 35px 11px;
       border-radius: 20px;
       transition: all 0.3s ease-in-out;
+      position: relative;
+
+      .bg-card {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        justify-content: end;
+        align-items: center;
+        border-radius: 20px;
+        padding-right: 10px;
+      }
 
       .card__img {
         min-width: 133px;
@@ -33,13 +47,17 @@
         border-radius: 20px;
         background-color: var(--belyy);
         color: #e90003;
+        position: relative;
+        z-index: 11;
       }
 
       .card__content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        
+        position: relative;
+        z-index: 11;
+
         .card__title {
           font-family: var(--font-family);
           font-weight: 600;
@@ -74,7 +92,10 @@
       }
 
       &:hover {
-        background: url("../../assets/bg.svg") center/cover no-repeat;
+        .bg-card{
+          display: flex;
+          background-color: #13172f;
+        }
 
         .card__img {
           color: #13172f;
@@ -96,24 +117,31 @@
     margin-bottom: 100px;
 
     .advantages__cards {
-      grid-template-columns: repeat(1, 1fr);
       row-gap: 20px;
 
       .card {
         padding: 25px 20px;
 
         .card__img {
-          min-width: 100px;
-          height: 100px;
+          min-width: 60px;
+          height: 60px;
+
+          svg {
+            width: 40px;
+          }
         }
 
         .card__content {
           .card__title {
-            font-size: 22px;
+            font-size: 20px;
           }
 
           .card__text {
             font-size: 14px;
+          }
+
+          button {
+            font-size: 16px;
           }
         }
       }
@@ -167,6 +195,8 @@
     }
 
     .advantages__cards {
+      grid-template-columns: repeat(1, 1fr);
+
       .card {
         padding: 15px;
 

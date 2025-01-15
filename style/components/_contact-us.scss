@@ -64,7 +64,6 @@
     }
 
     .cards {
-      grid-template-columns: 1fr;
       row-gap: 20px;
 
       .card {
@@ -101,6 +100,8 @@
     }
 
     .cards {
+      grid-template-columns: repeat(1, 1fr);
+      
       .card {
         padding: 20px;
         text-align: center;

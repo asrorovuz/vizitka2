@@ -25,6 +25,7 @@ footer {
 
       .contacts {
         display: flex;
+        align-items: center;
         row-gap: 30px;
         column-gap: 50px;
 
@@ -75,7 +76,6 @@ footer {
         justify-content: space-between;
 
         .contacts {
-          // flex-direction: column-reverse;
 
           address {
             max-width: 400px;
@@ -91,19 +91,23 @@ footer {
     padding: 40px 20px;
 
     .footer__container {
+      width: 100%;
+
       .footer__top {
         flex-direction: column;
         row-gap: 30px;
         text-align: center;
 
         .contacts {
-          flex-direction: column;
+          width: 100%;
+          justify-content: space-between;
           row-gap: 15px;
-          column-gap: 0;
+          column-gap: 20px;
 
           a,
           address {
             font-size: 16px;
+            text-align: center;
           }
         }
 
@@ -113,9 +117,9 @@ footer {
       }
 
       .footer__bottom {
-        flex-direction: column;
+        width: 100%;
         row-gap: 20px;
-        align-items: center;
+        align-items: start;
 
         a {
           font-size: 14px;
@@ -137,6 +141,9 @@ footer {
         }
 
         .contacts {
+          flex-direction: column;
+          align-items: center;
+        
           a,
           address {
             font-size: 14px;
@@ -150,6 +157,9 @@ footer {
       }
 
       .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+
         a {
           font-size: 12px;
         }

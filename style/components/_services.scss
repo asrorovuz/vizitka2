@@ -58,7 +58,7 @@
   .services__img {
     border-radius: 15px;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     background: url("../../assets/Rectangle\ 23.png") center/cover no-repeat;
 
     img {
@@ -70,7 +70,7 @@
   }
 
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 20px 0 50px;
 
     .services__content {
@@ -78,7 +78,7 @@
       row-gap: 20px;
 
       h1 {
-        font-size: 40px;
+        font-size: 36px;
       }
 
       p {
@@ -93,7 +93,9 @@
 
     .services__img {
       background-position: center;
+
       img {
+        width: 90%;
         bottom: -30px;
         right: -30px;
       }
@@ -101,6 +103,8 @@
   }
   
   @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    
     .services {
       padding: 15px 0 40px;
     }
@@ -125,6 +129,8 @@
 
     .services__img {
       background-size: cover;
+      display: none;
+
       img {
         bottom: -20px;
         right: -20px;
