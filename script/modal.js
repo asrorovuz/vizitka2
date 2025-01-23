@@ -185,4 +185,4 @@ modalClose.addEventListener("click", () => {
   modal.classList.remove("active");
 });
 
-window.addEventListener("resize", adjustModalFormScroll);
+// window.addEventListener("resize");

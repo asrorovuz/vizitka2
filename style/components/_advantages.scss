@@ -13,6 +13,7 @@
   .advantages__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     column-gap: 20px;
     row-gap: 25px;
 
@@ -24,6 +25,7 @@
       border-radius: 20px;
       transition: all 0.3s ease-in-out;
       position: relative;
+      overflow: hidden;
 
       .bg-card {
         display: none;
@@ -165,6 +167,12 @@
         text-align: center;
         padding: 20px;
 
+        .bg-card{
+          img{
+            display: none;
+          }
+        }
+
         .card__img {
           margin-bottom: 15px;
           min-width: 80px;
@@ -196,6 +204,7 @@
 
     .advantages__cards {
       grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(8, 1fr);
 
       .card {
         padding: 15px;

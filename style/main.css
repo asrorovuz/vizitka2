@@ -191,6 +191,7 @@ header .header-top .header-top__right button {
 }
 .services .services__img {
   border-radius: 15px;
+  margin: 7.42px 0;
   position: relative;
   background: url("../../assets/Rectangle 23.png") center/cover no-repeat;
 }
@@ -402,6 +403,7 @@ header .header-top .header-top__right button {
 .advantages .advantages__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   -moz-column-gap: 20px;
        column-gap: 20px;
   row-gap: 25px;
@@ -415,6 +417,7 @@ header .header-top .header-top__right button {
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
   position: relative;
+  overflow: hidden;
 }
 .advantages .advantages__cards .card .bg-card {
   display: none;
@@ -527,6 +530,9 @@ header .header-top .header-top__right button {
     text-align: center;
     padding: 20px;
   }
+  .advantages .advantages__cards .card .bg-card img {
+    display: none;
+  }
   .advantages .advantages__cards .card .card__img {
     margin-bottom: 15px;
     min-width: 80px;
@@ -549,6 +555,7 @@ header .header-top .header-top__right button {
   }
   .advantages .advantages__cards {
     grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
   }
   .advantages .advantages__cards .card {
     padding: 15px;
@@ -1244,6 +1251,7 @@ footer .footer__container .footer__bottom a {
 }
 footer .footer__container .footer__bottom a:nth-of-type(2) {
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 @media screen and (max-width: 1560px) {

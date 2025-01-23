@@ -59,7 +59,8 @@ footer {
         color: #bfbfbf;
 
         &:nth-of-type(2){
-            text-decoration: underline;
+          text-decoration: underline;
+          text-underline-offset: 4px;
         }
       }
     }
